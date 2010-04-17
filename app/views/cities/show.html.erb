@@ -1,0 +1,13 @@
+<h2><%= @city.name %></h2>
+
+<p><strong>Población: </strong> <%= @city.datasets.last.population %></p>
+
+<div id="container">
+</div>
+
+
+<%= render :partial => 'datatable', :locals => { :table_id => 'datatable' } %>
+
+<script type="text/javascript">
+<%= render :partial => 'pie_chart', :locals => { :table_id => 'datatable' } %>
+</script>

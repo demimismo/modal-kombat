@@ -1,0 +1,12 @@
+TIME,INDIC_UR_LAB,CITIES_LAB,INFO_LAB,INDICATORS,INDICATORS_VALUE
+1989_1993,"Total population in Urban Audit cities","Aarhus","Value",OBS_VALUE,264136
+1994_1998,"Total population in Urban Audit cities","Aarhus","Value",OBS_VALUE,279759
+1999_2002,"Total population in Urban Audit cities","Aarhus","Value",OBS_VALUE,286668
+1999_2002,"Proportion of journeys to work by bicycle","Aarhus","Value",OBS_VALUE,22.0
+1999_2002,"Proportion of journeys to work by foot","Aarhus","Value",OBS_VALUE,4.0
+2003_2006,"Total population in Urban Audit cities","Aarhus","Value",OBS_VALUE,293510
+2003_2006,"Proportion of journeys to work by bicycle","Aarhus","Value",OBS_VALUE,27.0
+2003_2006,"Proportion of journeys to work by foot","Aarhus","Value",OBS_VALUE,7.0
+2003_2006,"Proportion of journeys to work by public transport (rail, metro, bus, tram)","Aarhus","Value",OBS_VALUE,18.9
+2003_2006,"Proportion of journeys to work by car or motor cycle","Aarhus","Value",OBS_VALUE,43.0
+

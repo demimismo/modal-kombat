@@ -1,0 +1,22 @@
+<table id="<%= table_id %>">
+  <thead>
+    <tr>
+      <th>Año</th>
+      <th>A pie</th>
+      <th>En bici</th>
+      <th>En transporte público</th>
+      <th>En coche o moto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% city.datasets.each do |dataset| %>
+    <tr>
+      <th><%= dataset.year %></th>
+      <td><%= dataset.pedestrian_share %></td>
+      <td><%= dataset.bike_share %></td>
+      <td><%= dataset.public_transport_share %></td>
+      <td><%= dataset.motorized_share %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

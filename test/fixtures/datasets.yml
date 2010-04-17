@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  city: 
+  year: 1
+  population: 1
+  bike_share: 1.5
+  motorized_share: 1.5
+  public_transport_share: 1.5
+  pedestian_share: 1.5
+
+two:
+  city: 
+  year: 1
+  population: 1
+  bike_share: 1.5
+  motorized_share: 1.5
+  public_transport_share: 1.5
+  pedestian_share: 1.5
