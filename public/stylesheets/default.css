@@ -1,3 +1,118 @@
+/* Reset CSS */
+
+html{font:62.5% Arial, Helvetica,sans-serif;}
+body{margin:0;font-size:100%;}
+* html body{font-size:101%;}
+*:first-child+html body{font-size:101%;}
+
+h1,h2,h3,h4,h5,h6,p,pre,blockquote{margin:0;font-size:1em;}
+ul,ol,dl,dt,dd{padding:0;margin:0;}
+ul,ol{list-style:none;}
+address,cite{font-style:normal;}
+img{border:none;-ms-interpolation-mode:bicubic;}
+
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}
+
+td,th{vertical-align:top;}
+caption,th{text-align:left;}
+
+form{margin:0;}
+fieldset{margin:0;padding:0;border:none;}
+legend{margin:0;padding:0;color:#000;}
+input,textarea,select{font:1em Arial,Helvetica,sans-serif;}
+textarea{overflow:auto;}
+input[type="text"]{margin:0;}
+
+.estirar:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.estirar{display:inline-block;}
+/*\*/
+.estirar{display:block;}
+* html .estirar{height:1px;}
+/**/
+.izq,.col-i{float:left;display:inline;}
+.drcha,.col-d{float:right;display:inline;}
+.table{display:table;height:1%;}
+
+body {
+    margin-top:2em;
+    background:#393939 url(../images/bg.png) repeat-x 0 0;
+    color:#eee;
+}
+
+#head {
+    width:770px;
+    margin:0 auto 2em;
+    padding-left:30px;
+}
+#head h1 {
+    background:url(../images/logo.png);
+    width:499px;
+    height:112px;
+    margin:0 auto;
+    text-indent:-999px;
+    overflow:hidden;
+}
+
 #container, #container2 {
-  width: 700px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+/* FOrmulario home */
+
+
+#combat fieldset {
+    background:#333;
+    padding:2.5em;
+    width:42%;
+}
+#combat #player1 {
+    float:left;
+}
+#combat #player2 {
+    float:right;
+}
+#combat label {
+    font-size:1.8em;
+    color:#ddd;
+    display:block;
+    margin-bottom:.5em;
+}
+#combat fieldset input {
+    background:#fff;
+    color:#555;
+    font-weight:bold;
+    font-size:2.4em;
+    border:2px solid #666;
+    padding:5px;
+    width:318px;
+}
+
+#combat .submit {
+    clear:both;
+    text-align:center;
+    padding-top:2.5em;
+}
+#combat .submit input {
+    -moz-box-shadow:0px 0px 10px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow:0px 0px 10px rgba(255, 255, 255, 0.6);
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    
+    font-size:3em;
+    color:#fff;
+    text-transform:uppercase;
+    border:0;
+    padding:.3em 1em;
+    background:url(../images/bg_button.png) repeat-x 0 center;
+    text-shadow:0px 0px 5px #000;
+    cursor:pointer;
+}
+#combat .submit input:hover {
+    -moz-box-shadow:0px 0px 12px rgba(255, 255, 255, 1);
+    -webkit-box-shadow:0px 0px 12px rgba(255, 255, 255, 1);
+    
 }
