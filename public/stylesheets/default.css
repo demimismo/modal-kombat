@@ -38,6 +38,8 @@ body {
     background:#393939 url(../images/bg.png) repeat-x 0 0;
     color:#eee;
 }
+a { color:#fff23a; text-decoration:none; }
+a:hover { color:#f26e24; text-decoration:underline; }
 
 #head {
     width:770px;
@@ -53,13 +55,20 @@ body {
     overflow:hidden;
 }
 
+#main_container {
+    width:960px; margin:0 auto;
+}
 #content {
-    width: 800px;
-    margin: 0 auto;
+    width: 690px;
+    float:left;
+}
+#sidebar {
+    float:right;
+    width:250px;
 }
 
 #container, #container2 {
-    width: 700px;
+    width: 690px;
 }
 
 
@@ -91,7 +100,7 @@ body {
     font-size:2.4em;
     border:2px solid #666;
     padding:5px;
-    width:318px;
+    width:270px;
 }
 
 #combat .submit {
@@ -119,3 +128,32 @@ body {
     -webkit-box-shadow:0px 0px 12px rgba(255, 255, 255, 1);
     
 }
+
+.rankings {
+    background:#333;
+    padding:15px 15px 5px;
+}
+.rankings h2 {
+    color:#fff;
+    font-size:1.1em;
+    text-transform:uppercase;
+    margin-bottom:.3em;
+
+}
+.rankings ol {
+    list-style:decimal outside;
+    margin:0 0 1em 2em;
+}
+.rankings li {
+    font-size:1.2em;
+    line-height:1.5;
+    padding-right:3em;
+    position:relative;
+}
+.rankings li span {
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+
