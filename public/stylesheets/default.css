@@ -34,7 +34,7 @@ input[type="text"]{margin:0;}
 .table{display:table;height:1%;}
 
 body {
-    margin-top:2em;
+    margin:2em 0 3em;
     background:#393939 url(../images/bg.png) repeat-x 0 0;
     color:#eee;
 }
@@ -68,10 +68,6 @@ a:hover { color:#f26e24; text-decoration:underline; }
 #sidebar {
     float:right;
     width:250px;
-}
-
-#container, #container2 {
-    width: 690px;
 }
 
 .claim {
@@ -165,4 +161,37 @@ a:hover { color:#f26e24; text-decoration:underline; }
     top:0;
 }
 
+/* Versus */
+#versus h2 {
+    font-size:4em;
+    margin-bottom:.3em;
+    font-weight:normal;
+    text-align:center;
+}
 
+#c1 { float:left; width:49%; }
+#c2 { float:right;  width:49%; }
+
+#versus table {
+    width:100%;
+    margin-top:1.5em;
+}
+
+#versus table th {
+    background:#666;
+    color:#fff;
+    padding:.6em .6em;
+    font-size:1.1em;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+#versus table tbody th {
+    background:#444;
+}
+#versus table td {
+    text-align:center;
+    font-size:1.2em;
+    padding:.4em .6em;
+    border-bottom:1px dotted #444;
+}
+#versus table td.even { background:#222; }

@@ -1,4 +1,4 @@
-<table id="<%= table_id %>">
+<table id="<%= table_id %>" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
       <th>Año</th>
@@ -12,10 +12,10 @@
     <% city.datasets.each do |dataset| %>
     <tr>
       <th><%= dataset.year %></th>
-      <td><%= dataset.pedestrian_share %></td>
-      <td><%= dataset.bike_share %></td>
-      <td><%= dataset.public_transport_share %></td>
-      <td><%= dataset.motorized_share %></td>
+      <td class="odd"><%= dataset.pedestrian_share %></td>
+      <td class="even"><%= dataset.bike_share %></td>
+      <td class="odd"><%= dataset.public_transport_share %></td>
+      <td class="even"><%= dataset.motorized_share %></td>
     </tr>
     <% end %>
   </tbody>

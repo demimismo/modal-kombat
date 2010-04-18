@@ -1,17 +1,24 @@
-<h2><%= @city1.name %> vs. <%= @city2.name %></h2>
+<div id="versus" class="estirar">
 
-<div id="container">
+  <h2><%= @city1.name %> vs. <%= @city2.name %></h2>
+
+  <div id="c1">
+    <div id="container"></div>
+    <%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city1 } %>
+  </div>
+
+  <div id="c2">
+      <div id="container2"></div>
+      <%= render :partial => 'datatable', :locals => { :table_id => 'datatable2', :city => @city2 } %>
+  </div>
+
+  
+
+  <script type="text/javascript">
+  <%= render :partial => 'pie_chart.js.erb', :locals => { :table_id => 'datatable', :render_to => 'container' } %>
+  </script>
+  <script type="text/javascript">
+  <%= render :partial => 'pie_chart.js.erb', :locals => { :table_id => 'datatable2', :render_to => 'container2' } %>
+  </script>
+
 </div>
-
-<div id="container2">
-</div>
-
-<%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city1 } %>
-<%= render :partial => 'datatable', :locals => { :table_id => 'datatable2', :city => @city2 } %>
-
-<script type="text/javascript">
-<%= render :partial => 'pie_chart.js.erb', :locals => { :table_id => 'datatable', :render_to => 'container' } %>
-</script>
-<script type="text/javascript">
-<%= render :partial => 'pie_chart.js.erb', :locals => { :table_id => 'datatable2', :render_to => 'container2' } %>
-</script>
