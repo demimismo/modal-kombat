@@ -47,12 +47,15 @@ a:hover { color:#f26e24; text-decoration:underline; }
     padding-left:30px;
 }
 #head h1 {
-    background:url(../images/logo.png);
     width:499px;
-    height:112px;
     margin:0 auto;
+}
+#head h1 a {
+    height:112px;
+    background:url(../images/logo.png);
     text-indent:-999px;
     overflow:hidden;
+    display:block;
 }
 
 #main_container {
