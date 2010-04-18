@@ -50,11 +50,10 @@ var chart = new Highcharts.Chart({
         var table = document.getElementById('<%= table_id %>'),
           rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr'),
           result = [];
-
-        result.push(['A pie', parseInt(rows[3].getElementsByTagName('td')[0].innerHTML)]);
-        result.push(['En bici', parseInt(rows[3].getElementsByTagName('td')[1].innerHTML)]);
-        result.push(['Transporte', parseInt(rows[3].getElementsByTagName('td')[2].innerHTML)]);
-        result.push(['Coche o moto', parseInt(rows[3].getElementsByTagName('td')[3].innerHTML)]);
+        result.push(['A pie', parseInt(rows[rows.length-1].getElementsByTagName('td')[0].innerHTML)]);
+        result.push(['En bici', parseInt(rows[rows.length-1].getElementsByTagName('td')[1].innerHTML)]);
+        result.push(['Transporte', parseInt(rows[rows.length-1].getElementsByTagName('td')[2].innerHTML)]);
+        result.push(['Coche o moto', parseInt(rows[rows.length-1].getElementsByTagName('td')[3].innerHTML)]);
         return result;
       })()
    }]

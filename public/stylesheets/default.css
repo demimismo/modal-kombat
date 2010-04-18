@@ -53,11 +53,14 @@ body {
     overflow:hidden;
 }
 
-#container, #container2 {
+#content {
     width: 800px;
     margin: 0 auto;
 }
 
+#container, #container2 {
+    width: 700px;
+}
 
 
 

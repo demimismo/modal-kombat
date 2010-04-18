@@ -6,8 +6,8 @@
 </div>
 
 
-<%= render :partial => 'datatable', :locals => { :table_id => 'datatable' } %>
+<%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city } %>
 
 <script type="text/javascript">
-<%= render :partial => 'pie_chart', :locals => { :table_id => 'datatable' } %>
+<%= render :partial => 'pie_chart.js', :locals => { :table_id => 'datatable', :render_to => 'container' } %>
 </script>

@@ -1,4 +1,9 @@
 class CitiesController < ApplicationController
+
+  def index
+    @cities = City.all :select => 'name, id'
+  end
+
   def show
     @city = City.slugged_find params[:id]
   end

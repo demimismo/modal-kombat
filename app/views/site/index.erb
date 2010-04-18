@@ -1,14 +1,33 @@
-<form id="combat" class="estirar">
+<form id="combat" class="estirar" action="/" method="get">
   <fieldset id="player1">
     <label>Elige una ciudad</label>
-    <input type="text" />
+    <input type="text" id="city1" name="city1" />
   </fieldset>
   
   <fieldset id="player2">
     <label>Elige otra ciudad</label>
-    <input type="text" />
+    <input type="text" id="city2" name="city2" />
   </fieldset>
   <div class="submit">
-    <input type="submit" value="fight!">
+    <input type="submit" value="fight!" />
   </div>
 </form>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  	$("#city1").autocomplete(cities);
+  	$("#city2").autocomplete(cities);
+  });
+</script>
+
+<h2>Los que más se mueven a pie</h2>
+
+<% @pedestrian_rank.each do |dataset|  %>
+  <li><%= link_to dataset.city.name, city_path(dataset.city) %></li>
+<% end %>
+
+<h2>Los que más se mueven en coche</h2>
+
+<% @car_rank.each do |dataset|  %>
+  <li><%= link_to dataset.city.name, city_path(dataset.city) %></li>
+<% end %>

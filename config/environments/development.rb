@@ -15,3 +15,5 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+GMAPS_API_KEY = 'ABQIAAAAnz3y3-r6nf03My8P3lzPAxSoN_G5K-pEvZmFerykEUG-TrPz5xRac789FYpTqlPw2SxRsem6dzPKGw'
