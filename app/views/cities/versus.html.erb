@@ -1,6 +1,6 @@
 <div id="versus" class="estirar">
 
-  <h2><%= @city1.name %> vs. <%= @city2.name %></h2>
+  <h2><%= link_to @city1.name, city_path(@city1) %> vs. <%= link_to @city2.name, city_path(@city2) %></h2>
 
   <div id="c1">
     <div id="container"></div>

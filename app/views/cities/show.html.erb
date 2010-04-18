@@ -1,16 +1,17 @@
+<%- @page_title << "Descubre cómo se mueve la gente en #{@city.name}" -%>
+
 <div id="city">
 
 <div class="cab estirar">
-    <h2><%= @city.name %></h2>
-    <p><strong>Población: </strong> <%=  number_with_delimiter(@city.datasets.last.population, :delimiter => ".") %></p>
+    <h2><%= @city.name %><%= ", #{@city.country}" unless @city.country.blank? %></h2>
+    <p><strong>Población: </strong> <%=  number_with_delimiter(@city.datasets.last.population, :delimiter => ".") %> habitantes</p>
     <% unless @related_cities.blank? %>
     <p>Comparar <%= @city.name %> con ciudades de tamaño parecido:
       <%- @related_cities.each do |city| -%>
         <%= link_to city.city.name, "/#{@city.permalink}-versus-#{city.city.permalink}"  %>
       <%- end -%>
     </p>
-    <% end %>
-    
+    <% end %>    
 </div>
 
 
@@ -19,7 +20,18 @@
 
 <div id="table">
     <%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city } %>
+
+  <div id="posiciones">
+  <h2>De un total de <%= City.count %> ciudades evaluadas...</h2>
+  <p>A pie es la número <strong><%= @city.datasets.last.pedestrian_rank %></strong></p>
+  <p>En bici es la número <strong><%= @city.datasets.last.bike_rank %></strong></p>
+  <p>En transporte público es la número <strong><%= @city.datasets.last.public_transport_rank %></strong></p>
+  <p>En coche es la número <strong><%= @city.datasets.last.motorized_rank %></strong></p>
+  </div>
+
+  <p>Si quieres puedes ver los <%= link_to "rankings a nivel europeo", cities_path %>.</p>
 </div>
+
 
 <script type="text/javascript">
 <%= render :partial => 'pie_chart.js', :locals => { :table_id => 'datatable', :render_to => 'container' } %>

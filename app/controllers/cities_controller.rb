@@ -1,7 +1,15 @@
 class CitiesController < ApplicationController
 
   def index
-    @cities = City.all :select => 'name, id'
+    respond_to do |format|
+      format.js { @cities = City.all :select => 'name, id', :order => 'name asc' }
+      format.html {
+        @pedestrian_rank = Dataset.find :all, :order => 'pedestrian_share desc', :conditions => 'year = 2006', :limit => 10
+        @car_rank = Dataset.find :all, :order => 'motorized_share desc', :conditions => 'year = 2006', :limit => 10
+        @bike_rank = Dataset.find :all, :order => 'bike_share desc', :conditions => 'year = 2006', :limit => 10
+        @bus_rank = Dataset.find :all, :order => 'public_transport_share desc', :conditions => 'year = 2006', :limit => 10
+      }
+    end
   end
 
   def show

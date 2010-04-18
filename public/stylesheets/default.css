@@ -202,3 +202,24 @@ table.datatable td.even { background:#222; }
 
 #city #container { float:left; width:48%; }
 #city #table { float:right; width:48%; }
+
+
+#posiciones h2 {
+  font-size: 2em;
+  margin: 0 0 .7em 0;
+  padding-top: 1em;
+}
+
+#posiciones p {
+  font-size: 1.5em;
+  margin: 0 0 0 1em;
+}
+
+#city #table p {
+  font-size: 1.4em;
+  margin-top: .5em;
+}
+
+form#combat.estirar p.ejemplos {
+  font-size: 1.3em;
+}

@@ -1,0 +1,29 @@
+<div class="rankings">
+  <h2>Los que más se mueven a pie</h2>
+  <ol>
+  <% @pedestrian_rank.each do |dataset|  %>
+    <li><%= link_to dataset.city.name, city_path(dataset.city) %> <span><%= dataset.pedestrian_share %></span></li>
+  <% end %>
+  </ol>
+
+  <h2>Los que más se mueven en coche</h2>
+  <ol>
+  <% @car_rank.each do |dataset|  %>
+    <li><%= link_to dataset.city.name, city_path(dataset.city) %> <span><%= dataset.motorized_share %></span></li>
+  <% end %>
+  </ol>
+
+  <h2>Los que más se mueven en bici</h2>
+  <ol>
+  <% @bike_rank.each do |dataset|  %>
+    <li><%= link_to dataset.city.name, city_path(dataset.city) %> <span><%= dataset.bike_share %></span></li>
+  <% end %>
+  </ol>
+
+  <h2>Los que más se mueven en transporte público</h2>
+  <ol>
+  <% @bus_rank.each do |dataset|  %>
+    <li><%= link_to dataset.city.name, city_path(dataset.city) %> <span><%= dataset.public_transport_share %></span></li>
+  <% end %>
+  </ol>
+</div>
