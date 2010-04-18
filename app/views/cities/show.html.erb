@@ -1,10 +1,17 @@
 <h2><%= @city.name %></h2>
 
-<p><strong>Población: </strong> <%= @city.datasets.last.population %></p>
+<p><strong>Población: </strong> <%=  number_with_delimiter(@city.datasets.last.population, :delimiter => ".") %></p>
+
+<% unless @related_cities.blank? %>
+<p>Comparar <%= @city.name %> con ciudades de tamaño parecido:
+  <%- @related_cities.each do |city| -%>
+    <%= link_to city.city.name, "/#{@city.permalink}-versus-#{city.city.permalink}"  %>
+  <%- end -%>
+</p>
+<% end %>
 
 <div id="container">
 </div>
-
 
 <%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city } %>
 

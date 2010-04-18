@@ -6,6 +6,14 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.slugged_find params[:id]
+    last_dataset = @city.datasets.last
+    @related_cities = Dataset.find :all, :conditions => [
+      'city_id != ? and year = ? and population between ? and ?',
+      @city.id,
+      last_dataset.year,
+      last_dataset.population.to_i - 2000,
+      last_dataset.population.to_i + 2000
+    ]
   end
 
   def versus
