@@ -172,12 +172,12 @@ a:hover { color:#f26e24; text-decoration:underline; }
 #c1 { float:left; width:49%; }
 #c2 { float:right;  width:49%; }
 
-#versus table {
+table.datatable {
     width:100%;
     margin-top:1.5em;
 }
 
-#versus table th {
+table.datatable th {
     background:#666;
     color:#fff;
     padding:.6em .6em;
@@ -185,13 +185,20 @@ a:hover { color:#f26e24; text-decoration:underline; }
     font-weight:bold;
     text-transform:uppercase;
 }
-#versus table tbody th {
+table.datatable tbody th {
     background:#444;
 }
-#versus table td {
+table.datatable td {
     text-align:center;
     font-size:1.2em;
     padding:.4em .6em;
     border-bottom:1px dotted #444;
 }
-#versus table td.even { background:#222; }
+table.datatable td.even { background:#222; }
+
+#city .cab { padding-top:8px; margin-bottom:10px; }
+#city .cab h2 { font-size:4em; color:#fff; float:left; margin-right:.3em; margin-top:-8px; }
+#city .cab p { font-size:1.2em; line-height:1.4; }
+
+#city #container { float:left; width:48%; }
+#city #table { float:right; width:48%; }

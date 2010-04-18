@@ -1,20 +1,29 @@
-<h2><%= @city.name %></h2>
+<div id="city">
 
-<p><strong>Población: </strong> <%=  number_with_delimiter(@city.datasets.last.population, :delimiter => ".") %></p>
+<div class="cab estirar">
+    <h2><%= @city.name %></h2>
+    <p><strong>Población: </strong> <%=  number_with_delimiter(@city.datasets.last.population, :delimiter => ".") %></p>
+    <% unless @related_cities.blank? %>
+    <p>Comparar <%= @city.name %> con ciudades de tamaño parecido:
+      <%- @related_cities.each do |city| -%>
+        <%= link_to city.city.name, "/#{@city.permalink}-versus-#{city.city.permalink}"  %>
+      <%- end -%>
+    </p>
+    <% end %>
+    
+</div>
 
-<% unless @related_cities.blank? %>
-<p>Comparar <%= @city.name %> con ciudades de tamaño parecido:
-  <%- @related_cities.each do |city| -%>
-    <%= link_to city.city.name, "/#{@city.permalink}-versus-#{city.city.permalink}"  %>
-  <%- end -%>
-</p>
-<% end %>
 
 <div id="container">
 </div>
 
-<%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city } %>
+<div id="table">
+    <%= render :partial => 'datatable', :locals => { :table_id => 'datatable', :city => @city } %>
+</div>
 
 <script type="text/javascript">
 <%= render :partial => 'pie_chart.js', :locals => { :table_id => 'datatable', :render_to => 'container' } %>
 </script>
+
+
+</div>
