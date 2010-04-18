@@ -71,7 +71,13 @@ a:hover { color:#f26e24; text-decoration:underline; }
     width: 690px;
 }
 
-
+.claim {
+    background:#333;
+    font-size:1.8em;
+    line-height:1.4;
+    padding:15px;
+    margin-bottom:15px;
+}
 
 /* FOrmulario home */
 
