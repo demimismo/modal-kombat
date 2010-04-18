@@ -10,5 +10,11 @@ class SiteController < ApplicationController
 
     @car_rank = Dataset.find :all, :order => 'motorized_share desc', :conditions => 'year = 2006'
     @car_rank = @car_rank.select { |v| v.city.country == 'España' }[0..2]
+
+    @bike_rank = Dataset.find :all, :order => 'bike_share desc', :conditions => 'year = 2006'
+    @bike_rank = @bike_rank.select { |v| v.city.country == 'España' }[0..2]
+
+    @bus_rank = Dataset.find :all, :order => 'public_transport_share desc', :conditions => 'year = 2006'
+    @bus_rank = @bus_rank.select { |v| v.city.country == 'España' }[0..2]
   end
 end
